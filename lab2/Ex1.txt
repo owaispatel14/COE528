@@ -1,0 +1,24 @@
+//Requires: Two arrays that are not null, a and b, where the a.length and b.length is greater than 0. 
+//Modifies: The input array for a updates the element at the index of the maximum value in the array with the maximum from array b as well. 
+//Effects: This finds the maximum value in array a and the index of it, and then it finds the max value in array b. It then swaps values at the index of the max value in a with the max value in b. 
+
+This method finds the maximum value in array 'a' and then finds the max value in array 'b', and then replaces the max vale in a with the max value from b.
+
+
+public static void substituteMax(int[] a, int[] b) {
+	int maxOfA = a[0];
+	int index = 0;
+	for (int i = 0; i < a.length; i++) {
+		if(a[i] > maxOfA) {
+			maxOfA = a[i];
+			index = i;
+		}
+	}
+	int maxOfB = b[0];
+	for (int i = 0; i < b.length; i++) {
+		if(b[i] > maxOfB) {
+			maxOfB = b[i];
+		}
+	}
+	a[index] = maxOfB;
+}
